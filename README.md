@@ -15,7 +15,6 @@ A deep learning model for classifying dermatoscopic images into **seven skin les
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
 - [Clinical Interpretation](#clinical-interpretation)
-- [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
 - [Authors](#authors)
 - [References](#references)
@@ -98,26 +97,6 @@ Evaluated on an independent test set (**N = 1503**). **Overall accuracy: 84.63%*
 - **Melanoma sensitivity:** the model reached a recall of **0.71** for melanoma. The deliberate trade-off with lower precision (0.57) reflects a **safety-first** design — it is better to over-flag a suspicious lesion than to miss a malignant one.
 - **Strong performance on common classes:** melanocytic nevi (`nv`) achieved an F1 of 0.91, meaning the model reliably handles the most frequent benign cases.
 - **Role in the system:** the AI mitigates human subjectivity and reduces the risk of overlooking malignant cases, while the clinician verifies predictions through the device's optical modes.
-
----
-
-## Repository Structure
-
-> Adjust to match your actual files.
-
-```
-.
-├── data/                # HAM10000 images + metadata (or download instructions)
-├── notebooks/           # Training and evaluation notebooks
-├── src/
-│   ├── dataset.py       # Data loading, weighted sampler, transforms
-│   ├── model.py         # EfficientNet-B4 definition
-│   ├── train.py         # Training loop
-│   └── evaluate.py      # Metrics and test-set evaluation
-├── checkpoints/         # Saved model weights
-├── requirements.txt
-└── README.md
-```
 
 ---
 
